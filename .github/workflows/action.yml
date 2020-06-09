@@ -32,6 +32,6 @@ jobs:
     - name: Lint
       run: |
         psql -h localhost -U postgres -c "CREATE DATABASE scoutbee_server" && psql -h localhost -U postgres -c "DROP DATABASE scoutbee_server"
-        psql -h localhost -U postgres -c "CREATE DATABASE scoutbee_server" && python manage.py makemigrations --dry-run --check
+        psql -h localhost -U postgres -c "CREATE DATABASE scoutbee_server"
     # sudo -u postgres createdb scoutbee_server && python manage.py migrate && sudo -u postgres dropdb scoutbee_server
     # sudo -u postgres createdb scoutbee_server && python manage.py makemigrations --dry-run --check
